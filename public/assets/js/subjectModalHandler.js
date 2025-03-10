@@ -6,6 +6,7 @@ $(document).ready(function () {
         var code = button.data("code") || "";
         var name = button.data("name") || "";
         var units = button.data("units") || "";
+        var instructor = button.data("instructor") || "";
         var actionUrl = button.data("action");
         console.log(actionUrl);
         if (mode === "edit") {
@@ -30,6 +31,8 @@ $(document).ready(function () {
         $("#subjectCode").val(code);
         $("#subjectName").val(name);
         $("#units").val(units);
+        $("#instructor").val(instructor);
+
     });
     $("#triggerModalSubjects").on("hidden.bs.modal", function () {
         $("#subjectForm")[0].reset();

@@ -81,7 +81,11 @@
 
     }
 </script>
+
+
 @include('modals.gradesModal')
+
+
 
 <style>
 .student-info p {
@@ -89,6 +93,7 @@
     margin-bottom: 0.5rem;
 }
 
+/* Styling for scrollbars */
 .table-responsive::-webkit-scrollbar {
     width: 8px;
 }
@@ -105,5 +110,13 @@
 
 .table-responsive::-webkit-scrollbar-thumb:hover {
     background: #555;
+}
+
+/* Center text inside the enrollment table (both thead and tbody) */
+#enrollmentList td, 
+#enrollmentList th,
+thead th {
+    text-align: center;
+    vertical-align: middle;
 }
 </style>

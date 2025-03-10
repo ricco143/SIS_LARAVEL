@@ -157,59 +157,67 @@
       </div>
 </nav>
 
-<div class="container-fluid">
+<div class="container-fluid py-4">
     <div class="row">
-        <div class="col-md-12">
-            <div class="card mb-4">
-                <div class="card-header">   
-                    <h3 class="card-title  text-dark">Student Information</h3>
+        <div class="col-md-12 mx-auto">
+
+        <div class="text-center mb-4">
+                <h4>Welcome, {{ Auth::user()->name }}!</h4>
+            </div>
+            
+            <!-- Student Information Card -->
+            <div class="card shadow-sm mb-4">
+                <div class="card-header bg-dark text-white">
+                    <h4 class="card-title mb-0">Student Information</h4>
                 </div>
-                <div class="card-body  text-dark">
-                    <h5 class="card-title">Student Name: {{ $student->name }}</h5>
-                    <p class="card-text">Student ID: {{ $student->id }}</p>
-                    <p class="card-text">Student Email: {{ $student->email }}</p>
-                    <p class="card-text">Address: {{ $student->address }}</p>
-                    <p class="card-text">Course: {{ $student->course }}</p>
+                <div class="card-body">
+                    <h5 class="fw-bold">{{ $student->name }}</h5>
+                    <p class="mb-1"><strong>Student ID:</strong> {{ $student->id }}</p>
+                    <p class="mb-1"><strong>Email:</strong> {{ $student->email }}</p>
+                    <p class="mb-1"><strong>Address:</strong> {{ $student->address }}</p>
+                    <p class="mb-0"><strong>Course:</strong> {{ $student->course }}</p>
                 </div>
             </div>
 
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title text-dark">Enrolled Subjects</h3>
+            <!-- Enrolled Subjects Card -->
+            <div class="card shadow-sm">
+                <div class="card-header bg-success text-white">
+                    <h4 class="card-title mb-0">Enrolled Subjects</h4>
                 </div>
                 <div class="card-body">
-                    <table class="table table-hover">
-                        <thead class="table-dark">
+                    <table class="table table-striped table-bordered">
+                        <thead class="table-dark text-center">
                             <tr>
-                                <th scope="col">Subject Code</th>
-                                <th scope="col">Name</th>
-                                <th scope="col">Units</th>
-                                <th scope="col">Instructor</th>
+                                <th>Subject Code</th>
+                                <th>Name</th>
+                                <th>Units</th>
+                                <th>Instructor</th>
                             </tr>
                         </thead>
                         <tbody>
                             @if(isset($enrollments) && count($enrollments) > 0)
                                 @foreach($enrollments as $enrollment)
-                                <tr>
-                                    <td>{{ $enrollment->subject->code }}</td>
-                                    <td>{{ $enrollment->subject->name }}</td>
-                                    <td>{{ $enrollment->subject->units }}</td>
-                                    <td>{{ $enrollment->subject->instructor }}</td>
-                                </tr>
+                                    <tr class="text-center">
+                                        <td>{{ $enrollment->subject->code }}</td>
+                                        <td>{{ $enrollment->subject->name }}</td>
+                                        <td>{{ $enrollment->subject->units }}</td>
+                                        <td>{{ $enrollment->subject->instructor }}</td>
+                                    </tr>
                                 @endforeach
                             @else
                                 <tr>
-                                    <td colspan="4" class="text-center">No subjects enrolled</td>
+                                    <td colspan="4" class="text-center text-muted">No subjects enrolled</td>
                                 </tr>
                             @endif
                         </tbody>
                     </table>
                 </div>
             </div>
+
         </div>
     </div>
 </div>
 
-
 </main>
+
 @endsection

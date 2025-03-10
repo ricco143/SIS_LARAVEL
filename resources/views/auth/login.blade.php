@@ -31,7 +31,7 @@
           <div class="container-fluid ps-2 pe-0">
           <img src="../assets/img/logo-ct-dark.png" class="navbar-brand-img" width="26" height="26" alt="main_logo">
             <a class="navbar-brand font-weight-bolder ms-sm-3 d-none d-md-block  " href="javascript:;">
-              Login Page
+              Login
             </a>
             <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon mt-2">

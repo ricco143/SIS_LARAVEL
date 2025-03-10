@@ -7,7 +7,7 @@
             </div>
             <div class="modal-body">
                 <div style="max-height: 500px; overflow-y:auto; scrollbar-width: thin;" class="custom-scrollbar">
-                    <table class="table table-dark table-hover border-secondary">
+                    <table id="gradesTable" class="table table-dark table-hover border-secondary">
                         <colGroup>
                             <col width="10%">
                             <col width="20%">
@@ -63,7 +63,37 @@
         });
     }
 </script>
+
+<script>
+    $(document).ready(function() {
+        $('#gradesTable').DataTable({
+            "pageLength": 10,
+            "ordering": true,
+            "info": true,
+            "lengthChange": true,
+            "searching": true,
+            "responsive": true,
+            "columnDefs": [
+                { "orderable": false, "targets": 4 }, // Disable sorting for action column
+                { "className": "text-center", "targets": "_all" } // Center align all columns
+            ],
+            "language": {
+                "search": "Search grades:",
+                "lengthMenu": "Show _MENU_ grades per page",
+                "info": "Showing _START_ to _END_ of _TOTAL_ grades"
+            }
+        });
+    });
+</script>
 <style>
+/* Ensure text in the grades table is centered */
+#gradesTable th, 
+#gradesTable td {
+    text-align: center !important;
+    vertical-align: middle !important;
+}
+
+/* Custom scrollbar styling */
 .custom-scrollbar::-webkit-scrollbar {
     width: 8px;
 }

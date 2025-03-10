@@ -19,23 +19,18 @@ Route::get('/dashboard', function () {
 Route::get('/student/dashboard', [StudentDashboardController::class, 'index'])
     ->middleware(['auth:student'])
     ->name('student.dashboard');
-
 Route::resource('/students', StudentController::class)->middleware(['auth:web', 'verified']);
 Route::resource('/subjects', SubjectController::class)->middleware(['auth:web', 'verified']);
 Route::resource('/grade', GradeController::class)->middleware(['auth:web', 'verified']);
 Route::resource('/student/enroll', EnrollmentController::class)->middleware(['auth:web', 'verified']);
-Route::get('/student/{student_id}/subjects', [EnrollmentController::class, 'getSubjects'])
-    ->name('enrollment.subjects')
+Route::get('/student/{student_id}/subjects', [EnrollmentController::class, 'getSubjects'])->name('enrollment.subjects')
     ->middleware(['auth:web', 'verified']);
-
+Route::middleware(['auth:student'])->group(function () {
+Route::get('/grades', [StudentDashboardController::class, 'grades'])->name('student.grades');
+});
 Route::middleware(['auth:student'])->group(function () {
     Route::get('/grades', [StudentDashboardController::class, 'grades'])->name('student.grades');
 });
-
-Route::middleware(['auth:student'])->group(function () {
-    Route::get('/grades', [StudentDashboardController::class, 'grades'])->name('student.grades');
-});
-
 Route::post('/student/logout', [StudentDashboardController::class, 'logout'])->name('student.logout');
 
 Route::middleware('auth:web')->group(function () {

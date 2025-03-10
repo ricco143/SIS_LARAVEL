@@ -21,7 +21,7 @@ class StudentFactory extends Factory
             'email' => fake()->unique()->safeEmail(),
             'address' => fake()->address(),
             'course' => fake()->word(),
-            'password' => static::$password ??= Hash::make('password'),
+            'password' => fn() => bcrypt(fake()->password(12)),
         ];
     }
 }

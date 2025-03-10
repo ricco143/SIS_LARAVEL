@@ -7,7 +7,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <title>
-  @yield('title', 'Landing Page')
+  @yield('title', 'Student Information System')
   </title>
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700,900" />
@@ -32,7 +32,7 @@
           <div class="container-fluid px-0">
           <img src="../assets/img/logo-ct-dark.png" class="navbar-brand-img" width="26" height="26" alt="main_logo">
             <a class="navbar-brand font-weight-bolder ms-sm-3 d-none d-md-block" href="" rel="tooltip" data-placement="bottom" target="_blank">
-              Landing Page
+              Student Information System
             </a>
             <a class="navbar-brand font-weight-bolder ms-sm-3 d-block d-md-none" href="https://www.creative-tim.com/material-dashboard" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom" target="_blank">
               Material Dashboard
@@ -120,13 +120,13 @@
                 <path d="M18.5714 7.07812C18.5714 7.24182 18.4747 7.42039 18.2813 7.61384L14.2299 11.5647L15.1897 17.1451C15.1972 17.1972 15.2009 17.2716 15.2009 17.3683C15.2009 17.5246 15.16 17.6548 15.0781 17.7589C15.0037 17.8705 14.8921 17.9263 14.7433 17.9263C14.6019 17.9263 14.4531 17.8817 14.2969 17.7924L9.28571 15.1585L4.27455 17.7924C4.11086 17.8817 3.96205 17.9263 3.82813 17.9263C3.67188 17.9263 3.55283 17.8705 3.47098 17.7589C3.39658 17.6548 3.35938 17.5246 3.35938 17.3683C3.35938 17.3237 3.36682 17.2493 3.3817 17.1451L4.34152 11.5647L0.279018 7.61384C0.093006 7.41295 0 7.23437 0 7.07812C0 6.80283 0.208333 6.6317 0.625 6.56473L6.22768 5.75L8.73884 0.671874C8.88021 0.366815 9.0625 0.214285 9.28571 0.214285C9.50893 0.214285 9.69122 0.366815 9.83259 0.671874L12.3438 5.75L17.9464 6.56473C18.3631 6.6317 18.5714 6.80283 18.5714 7.07812Z" fill="#EC407A" />
               </svg>
               <p class="text-primary font-weight-bold mb-0 ms-2">
-                10,000+ Github Stars
+              10,000+ Students Enrolled
               </p>
             </div>
-            <h1>Material Dashboard</h1>
+            <h1>Student Information System</h1>
             <p class="text-lg mt-3">
-              Creative Tim's Most Popular Product. Download it now for free to create professional-looking and functional admin dashboards for your web projects.
-            </p>
+          Manage student records, track grades, and monitor attendance with ease. Download and integrate our Student Information System into your school’s web platform for efficient student management.
+        </p>
             <div class="d-flex align-items-center mb-4">
               <div class="avatar-group">
                 <a href="javascript:;" class="avatar avatar-sm rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" aria-label="Martin Doe" data-bs-original-title="Martin Doe">
@@ -221,21 +221,21 @@
               <div class="col-md-6 col-lg-3 position-relative">
                 <div class="p-3 text-center">
                   <h1 class="text-gradient text-primary"><span id="stats1" countTo="10000">0</span>+</h1>
-                  <h5 class="mt-3">Github Stars</h5>
+                  <h5 class="mt-3">Student</h5>
                 </div>
                 <hr class="vertical dark">
               </div>
               <div class="col-md-6 col-lg-3 position-relative">
                 <div class="p-3 text-center">
                   <h1 class="text-gradient text-primary"> <span id="stats2" countTo="1300000">0</span>+</h1>
-                  <h5 class="mt-3">Intern Downloads</h5>
+                  <h5 class="mt-3">Student Enrolled</h5>
                 </div>
                 <hr class="vertical dark">
               </div>
               <div class="col-md-6 col-lg-3 position-relative">
                 <div class="p-3 text-center">
                   <h1 class="text-gradient text-primary"> <span id="stats3" countTo="3800">0</span>+</h1>
-                  <h5 class="mt-3">Figma Duplicates</h5>
+                  <h5 class="mt-3">Subject</h5>
                 </div>
                 <hr class="vertical dark">
               </div>
@@ -253,7 +253,7 @@
     <div class="container">
       <div class="row mb-5">
         <div class="col-lg-7 mx-auto text-center">
-        <h2 class="mb-3">Material Dashboard in Other Technologies</h2>
+        <h2 class="mb-3">Student Information System in Other Technologies</h2>
         <p>
           Our versatile admin template comes with many versions based on the most popular frontend and backend technologies to suit a wide range of web development needs
         </p>
