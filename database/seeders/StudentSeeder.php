@@ -15,12 +15,12 @@ class StudentSeeder extends Seeder
      */
     public function run(): void
     {
-        Student::factory(40)->create([
+        Student::factory(30)->create([
             'name' => fn() => fake()->name(),
             'email' => fn()  =>  fake()->unique()->safeEmail(),
             'address' => fn()  => fake()->address(),
             'course' => fn() => fake()->word(),
-            'password' => fn() => fake()->word(),
+            'password' => bcrypt('qwerty123'),
         ]);
     }
 }

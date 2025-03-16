@@ -116,7 +116,7 @@
             </li>
             <li class="nav-item dropdown pe-2 d-flex align-items-center">
                 <a href="javascript:;" class="nav-link text-body font-weight-bold px-0 d-flex align-items-center" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="../assets/img/team-4.jpg" class="avatar avatar-sm rounded-circle" alt="user">
+                    <img src="../assets/img/team-1.jpg" class="avatar avatar-sm rounded-circle" alt="user">
                     <div class="d-flex flex-column ms-2">
                         <span class="d-none d-md-inline-block">{{ Auth::user()->name }}</span>
                         <small>{{ Auth::user()->email }}</small>
